@@ -2,15 +2,16 @@
   "name": "eltonjohn",
   "version": "1.0.0",
   "description": "book store website",
-  "main": "main.js",
+  "main": "server.js",
   "dependencies": {
     "eslint": "^7.32.0",
+    "express": "^4.17.1",
     "firebase": "^9.1.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node server.js"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC"
