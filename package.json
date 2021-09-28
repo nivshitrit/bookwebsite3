@@ -2,7 +2,7 @@
   "name": "eltonjohn",
   "version": "1.0.0",
   "description": "book store website",
-  "main": "main.js",
+  "main": "index.html",
   "dependencies": {
     "eslint": "^7.32.0",
     "firebase": "^9.1.0"
