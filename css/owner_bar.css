@@ -1,0 +1,49 @@
+.main_div{
+    background: linear-gradient(
+        rgba(0,0,0,.3),rgba(0,0,0,.4)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQtjRNgLgwUKazn9eOoqp_Gc0Lvf9oh34Jjdw&usqp=CAU');
+        background-size:cover;
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.gafsou {
+    font-size: 50px;
+    margin: auto;
+}
+
+.owner_bar {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    margin: 25px;
+    color: darkblue;
+    font-size: 25px;
+}
+
+.dropdown-menu {
+    border:none;
+    color: black;
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+  }
+
+body {
+    background: linear-gradient(
+        rgba(0,0,0,.3),rgba(0,0,0,.4)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrjRIztKJJLnkcZMaxKELsTCiCHiN5KyIy6A&usqp=CAU');
+        background-size:cover;
+         color : white;
+}
+
+.table {
+    color: wheat
+}
+
+.table-row:hover {
+    color: rgb(206, 206, 206)
+}

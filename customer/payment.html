@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- kit code font awesome -->
+    <script src="https://kit.fontawesome.com/5febebbc7f.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+
+
+    <link rel="stylesheet" href="../css/payment.css">
+
+    <link rel="stylesheet" href="../css/nav_header.css">
+    <link rel="stylesheet" href="../css/receipt.css">
+
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .4)),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNegs9bjSqFlmb3gRzw73twYk4RpjKYBL-5g&usqp=CAU');
+            /* url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWBTWgDNj5w7wn65JcSJuuOsbgvY3By78MZQ&usqp=CAU'); */
+            /* url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS35UuPPy_Q25dhH_zUHdV9gjJQKqaiCkTP0g&usqp=CAU'); */
+            background-size: cover;
+        }
+    </style>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#nav_header").load("../asset/nav_header.html");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="nav_header"></div>
+
+    <div class="container-fluid " id="payment_form">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-12 col-lg-10">
+                <div class="card card0 rounded-0">
+                    <div class="row">
+                        <div class="col-md-5 d-block p-0 box">
+                            <div class="card rounded-0 border-0 card1 pr-xl-4 pr-lg-3"> <img src="" height="572px">
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12 p-0 box">
+                            <div class="card rounded-0 border-0 card2">
+                                <div class="form-card" onsubmit="return false">
+                                    <h2 id="heading" class="">Your payment details</h2>
+                                    <label class="pay">Full Name</label>
+                                    <input id="name" type="text" name="holdername" placeholder="John Smith">
+                                    <label class="pay">email</label>
+                                    <input id="email" type="text" name="holdername" placeholder="John@">
+                                    <div class="row">
+                                        <div class="col-12"> <label class="pay ">Card Number</label>
+                                            <input type="text" name="cardno" id="cr_no"
+                                                placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"> </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-9 col-md-7">
+                                            <label class="pay">Expiration Date</label>
+                                            <div class="col-12 pl-0">
+                                                <select class="list-dt pr-3 mr-4 mr-md-2 mr-lg-3" id="month"
+                                                    name="expmonth">
+                                                    <option selected>Month</option>
+                                                    <option>January</option>
+                                                    <option>February</option>
+                                                    <option>March</option>
+                                                    <option>April</option>
+                                                    <option>May</option>
+                                                    <option>June</option>
+                                                    <option>July</option>
+                                                    <option>August</option>
+                                                    <option>September</option>
+                                                    <option>October</option>
+                                                    <option>November</option>
+                                                    <option>December</option>
+                                                </select>
+                                                <select class="list-dt pr-3" id="year" name="expyear" required>
+                                                    <option value="Year">Year</option>
+                                                    <option value="2021">2021</option>
+                                                    <option value="2022">2022</option>
+                                                    <option value="2023">2023</option>
+                                                    <option value="2024">2024</option>
+                                                    <option value="2025">2025</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 col-md-5">
+                                            <label class="pay">CVV</label>
+                                            <input id="cvv" type="password" name="cvcpwd"
+                                                placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3"
+                                                maxlength="3"> </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-12">
+                                            <div class="custom-control custom-checkbox custom-control-inline"> <input
+                                                    id="chk1" type="checkbox" name="chk" class="custom-control-input"
+                                                    checked="true"> <label for="chk1" class="custom-control-label">Save
+                                                    my card for future purchases</label> </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="submit" value="PAY NOW" onclick="pay_now()"
+                                                class="btn btn-success "> </div>
+                                        <div class="col-md-6">
+                                            <input type="submit" value="" class="btn btn-success disabled total_price">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- receipt -->
+
+    <div class="receipt">
+        <!-- <div id="invoice-POS"> -->
+        <center id="top">
+            <div class="logo"></div>
+            <div class="info">
+                <h2>GAFSOU JEWLERY</h2>
+            </div>
+            <!--End Info-->
+        </center>
+        <!--End InvoiceTop-->
+
+        <div id="mid">
+            <div class="info">
+                <h2>Receipt Number : <span class="receipt_number"></span></h2>
+                <h2>Contact Info : <span class="client_email"></span></h2>
+            </div>
+        </div>
+        <!--End Invoice Mid-->
+
+        <div id="bot">
+
+            <div id="table">
+                <table id="table_receipt">
+                    <tr class="tabletitle first_row">
+                        <td class="item">
+                            <h2>Item</h2>
+                        </td>
+                        <td class="Hours">
+                            <h2>Qty</h2>
+                        </td>
+                        <td class="Rate">
+                            <h2>Sub Total</h2>
+                        </td>
+                    </tr>
+
+                    <tr class="tabletitle">
+                        <td></td>
+                        <td class="Rate">
+                            <h2>Total</h2>
+                        </td>
+                        <td class="payment">
+                            <h2 id="total"></h2>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+            <div id="legalcopy">
+                <p class="legal"><strong>THANK YOU FOR YOUR PURCHSE!</strong> 
+                </p>
+            </div>
+            <div>
+                <button type="button" class="btn btn-secondary" onclick="back_to_main_page()">BACK TO
+                    SHOPPING</button>
+            </div>
+        </div>
+        <!-- </div> -->
+    </div>
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBojrpaeYx05sqWTxEpeaqWgp6l2rQ9lwk",
+            authDomain: "project-x-f85be.firebaseapp.com",
+            databaseURL: "https://project-x-f85be.firebaseio.com",
+            projectId: "project-x-f85be",
+            storageBucket: "project-x-f85be.appspot.com",
+            messagingSenderId: "484540264985",
+            appId: "1:484540264985:web:568f365115a25262437088",
+            measurementId: "G-XVEXZX9VCD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="../js/payment.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.contact_us {
+    /* background-color: grey; */
+    margin: auto;
+    padding-bottom: 200px ;
+    color: white;
+
+}
+
+body {
+    background: linear-gradient(
+        rgba(0,0,0,.3),rgba(0,0,0,.4)),
+        url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSNegs9bjSqFlmb3gRzw73twYk4RpjKYBL-5g&usqp=CAU');
+        /* url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRWBTWgDNj5w7wn65JcSJuuOsbgvY3By78MZQ&usqp=CAU'); */
+        /* url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS35UuPPy_Q25dhH_zUHdV9gjJQKqaiCkTP0g&usqp=CAU'); */
+    background-size:cover;
+}

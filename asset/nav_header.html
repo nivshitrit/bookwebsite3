@@ -1,0 +1,99 @@
+<div>
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-dark bg-black ">
+        <div class="container">
+            <a href="#" class="navbar-brand">GAFSOU JEWLERY</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar_collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar_collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a href="/jewlery_website/customer/index.html" class="nav-link">home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/jewlery_website/customer/index.html#products" class="nav-link"> products</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/jewlery_website/customer/index.html#about" class="nav-link">about</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="/jewlery_website/customer/contact.html" class="nav-link"> contact </a>
+                </li>
+                <li class="nav-item dropdown sign">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        SIGN
+                    </a>
+                    <div class="dropdown-menu bg-dark " aria-labelledby="navbarDropdown">
+                        <a href="/jewlery_website/customer/index.html?sign_up" onclick="sign_up()"
+                            class="dropdown-item text-white bg-dark ">sign up</a>
+                        <a href="/jewlery_website/customer/index.html?sign_in" onclick="sign_in()"
+                            class="dropdown-item text-white bg-dark ">sign in </a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a href="/jewlery_website/owner/owner.html" id="admin" class="nav-link "></a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#" id="client" class="nav-link"></a>
+                </li>
+                <li class="nav-item ">
+                    <a href="#" id="sign_out" class="nav-link">out</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/jewlery_website/customer/cart.html" class="nav-link">
+                        <span class='badge badge-warning' id='cart_count'></span>
+                        <i class="fas fa-shopping-cart fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<script>
+    $(function () {
+        var sum = Number(localStorage.getItem("cart"));
+        console.log(sum)
+        var admin = localStorage.getItem("admin");
+        var client = localStorage.getItem("client");
+
+        if (sum > 0) {
+            $("#cart_count").text(localStorage.getItem("cart"));
+        }
+        if (admin != null) {
+            $(".sign_up").hide();
+            $(".sign_in").hide();
+            $("#sliders").hide();
+            $(".sign").hide();
+            $("#admin").text(admin);
+            $("#sign_out").show();
+            $("#admin").show();
+        }
+        if (client != null) {
+            $(".sign").hide();
+            $(".sign_up").hide();
+            $(".sign_in").hide();
+            $("#sliders").hide();
+            $("#client").text(client);
+            $("#sign_out").show();
+            $("#client").show();
+        }
+
+        $("#sign_out").click(() => {
+            localStorage.removeItem("admin")
+            localStorage.removeItem("client")
+            localStorage.removeItem("order")
+            $("#client").hide();
+            $("#admin").hide();
+            $("#sign_out").hide();
+            $("#sliders").show();
+            $(".welcome").hide();
+            $(".sign").show();
+            window.location = "/jewlery_website/customer/index.html"
+        })
+    });
+</script>

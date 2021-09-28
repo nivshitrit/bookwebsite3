@@ -1,0 +1,17 @@
+
+.crud_form {
+    display: none;
+    margin-left: 20px;
+}
+
+.crud_btn {
+    display: none;
+}
+
+.panel_control{
+    display: flex;
+}
+
+
+
+

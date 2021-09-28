@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- kit code font awesome -->
+    <script src="https://kit.fontawesome.com/5febebbc7f.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/add_pruduct.css">
+    <link rel="stylesheet" type="text/css" href="../css/owner_bar.css">
+    <link rel="stylesheet" href="../css/nav_header.css">
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#nav_header").load("../asset/nav_header.html");
+            $("#owner_bar").load("../asset/owner_bar.html");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="nav_header"></div>
+    <div id="owner_bar"></div>
+
+    <!-- product form  -->
+    <div class="container">
+        <div class="out_form">
+            <div class="form-style-2 " onsubmit="return false">
+                <div class="form-style-2-heading">Provide your information</div>
+                <form>
+                    <label><span> id <span class="required">*</span></span>
+                        <input type="text" id="id" class="input-field" value="" required disabled />
+                    </label>
+                    <label for="name"><span> name <span class="required">*</span></span>
+                        <input type="text" id="name" class="input-field" name="name" value="" required />
+                    </label>
+                    <label for="company"><span> company <span class="required">*</span></span>
+                        <input type="text" id="company" class="input-field" name="company" value="" required />
+                    </label>
+                    <label for="price"><span> price <span class="required">*</span></span>
+                        <input type="text" id="price" class="input-field" name="price" value="" required />
+                    </label>
+                    <label for="discount"><span>discount</span>
+                        <input type="text" id="discount" class="input-field" name="discount" value="" />
+                    </label>
+                    <label for="quantity"><span>quantity <span class="required">*</span></span>
+                        <input type="text" id="quantity" class="input-field" name="quantity" value="" required />
+                    </label>
+                    <label for="category"><span>category<span class="required">*</span></span>
+                        <select id="category" name="category" class="select-field" required>
+                            <option value="choose">choose</option>
+                            <option value="rings">rings</option>
+                            <option value="diamonds">diamonds</option>
+                            <option value="watches">watches</option>
+                            <option value="bracelets">bracelets</option>
+                            <option value="pendants">pendants</option>
+                            <option value="earrings">earrings</option>
+                            <option value="necklaces">necklaces</option>
+                        </select>
+                    </label>
+                    <label for="description"><span> description </span>
+                        <textarea name="description" id="description" class="textarea-field"></textarea>
+                    </label>
+                    <label for="load_img"><span> image<span class="required">*</span></span>
+                        <input type="text" id="img" name="load_img" value="" required />
+
+                    </label>
+                    <div>
+                        <label><span> </span><input class="crud_btn" onclick="add()" type="submit"
+                                value="ADD" /></label>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+        <script>
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "firebase/app";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+			
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+			apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
+			authDomain: "bookwebsite-cf9d0.firebaseapp.com",
+			projectId: "bookwebsite-cf9d0",
+			storageBucket: "bookwebsite-cf9d0.appspot.com",
+			messagingSenderId: "761492794383",
+			appId: "1:761492794383:web:1de8490d228300bd39077a"
+			};
+			
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+        </script>
+    </div>
+    <script src="../js/add_pruduct.js"></script>
+
+
+</body>
+
+</html>

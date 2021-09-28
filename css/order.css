@@ -1,0 +1,126 @@
+
+
+img{
+    width: 151px;
+    height: 85px;
+}
+
+.table-row{
+    cursor:pointer;
+}
+
+/* .form-style-2{
+    display: none;
+    position: absolute;
+    background-color: grey;
+    margin: -100px 0 0 -200px;
+    top: 50%;
+    left: 40%;
+}​ */
+
+/* .receipt{
+    display: none;
+    position: absolute;
+    background-color: yellow;
+    margin: -100px 0 0 -200px;
+    top: 50%;
+	left: 40%;
+	margin:0 auto;
+	border: 1px solid black;
+}​ */
+
+.receipt {
+	display: none;
+    position: absolute;
+	margin: -100px 0 0 -200px;
+	margin:0 auto;
+    top: 10%; 
+	left: 20%; 
+	border: 1px solid black;
+	padding: 20px 12px 10px 20px;
+	font: 18px Arial, Helvetica, sans-serif;
+}
+
+/* <style type="text/css"> */
+
+
+.form-style-2 {
+	margin:0 auto;
+	border: 1px solid black;
+} 
+
+.form-style-2 label {
+	display: inline;
+	text-align: left;
+	background-color: yellow;
+} 
+
+
+.form-style-2{
+	max-width: 500px;
+	padding: 20px 12px 10px 20px;
+	font: 18px Arial, Helvetica, sans-serif;
+}
+.form-style-2-heading{
+	font-weight: bold;
+	font-style: italic;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 15px;
+	padding-bottom: 3px;
+}
+.form-style-2 label{
+	display: block;
+	margin: 0px 0px 15px 0px;
+}
+.form-style-2 label > span{
+	width: 100px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.form-style-2 span.required{
+	color:red;
+}
+
+.form-style-2 input.input-field, .form-style-2 .select-field{
+	width: 48%;	
+}
+.form-style-2 input.input-field, 
+/* .form-style-2 .tel-number-field,  */
+.form-style-2 .textarea-field, 
+ .form-style-2 .select-field{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 7px;
+	outline: none;
+	margin : 10px;
+}
+.form-style-2 .input-field:focus, 
+.form-style-2 .textarea-field:focus,  
+.form-style-2 .select-field:focus{
+	border: 1px solid #0C0;
+}
+.form-style-2 .textarea-field{
+	height:100px;
+	width: 55%;
+}
+
+
+.out_btn {
+    float: right;
+}
+
+body {
+	background-color: grey;
+}
+        

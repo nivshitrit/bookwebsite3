@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- kit code font awesome -->
+    <script src="https://kit.fontawesome.com/5febebbc7f.js" crossorigin="anonymous"></script>
+
+    <!-- css -->
+
+    <link rel="stylesheet" href="../css/nav_header.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#nav_header").load("../asset/nav_header.html");
+        })
+    </script>
+    <title>jewlery shop</title>
+</head>
+
+<body>
+    <div id="nav_header"></div>
+
+    <!-- sliders -->
+    <section id="sliders">
+        <div id="carousel_1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel_1" data-slide-to="0" class="active"> </li>
+                <li data-target="#carousel_1" data-slide-to="1"> </li>
+                <li data-target="#carousel_1" data-slide-to="2"> </li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item carousel-image-1 active">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                            <h1 class="display-3 title-color">WELLCOME TO ELTON JOHN'S BOOKSTORE'</h1>
+                            <p class="lead">10% PERCENT OFF ON THE FIRST PURCHASE FOR NEW COSTUMERS </p>
+                            <a href="#" onclick="sign_up()" class="btn btn-color slide-btn btn-lg">Sign Up NOW</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-image-2 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                            <h1 class="display-3 title-color">ALL TYPES OF BOOKS IN ONE PLACE</h1>
+                            <p class="lead">START SHOPPING NOW!!!</p>
+                            <a href="#products" class="btn btn-color slide-btn btn-lg">START SHOPPING</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item carousel-image-3 ">
+                    <div class="container">
+                        <div class="carousel-caption d-none d-sm-block text-center mb-5">
+                            <h1 class="display-3 title-color">LEARN MORE ABOUT US</h1>
+                            <!-- <p class="lead">TItle 2</p> -->
+                            <a href="#about" class="btn btn-color slide-btn btn-lg">ABOUT US</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#carousel_1" data-slide="prev" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#carousel_1" data-slide="next" class="carousel-control-prev">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- welcom  -->
+    <form class="welcome">
+        <div>
+            <h1></h1><br>
+            <hr>
+            <h4></h4>
+            <h6></h6>
+        </div>
+    </form>
+
+    <!-- sign  -->
+    <form class="sign_up" onsubmit="return false">
+        <h1> SIGN UP</h1>
+        <hr>
+        <label>
+            <p class="label-txt ">EMAIL</p>
+            <input type="text" id="sign_up_email" class="input" required>
+            <div class="line-box">
+                <div class="line">
+                </div>
+            </div>
+        </label>
+        <label>
+            <p class="label-txt">PASSWORD</p>
+            <input type="password" id="sign_up_psw" class="input" required>
+            <div class="line-box">
+                <div class="line">
+                </div>
+            </div>
+        </label>
+        <label>
+            <p class="label-txt ">CONFIRM YOUR PASSWORD</p>
+            <input type="password" id="confirm_psw" class="input" required>
+            <div class="line-box">
+                <div class="line">
+                </div>
+            </div>
+        </label>
+        <button type="submit" onclick="submit_sign_up()">submit</button>
+    </form>
+
+    <!-- login -->
+    <form class="sign_in" onsubmit="return false">
+        <h1> SIGN IN</h1>
+        <hr>
+        <label>
+            <p class="label-txt">ENTER YOUR EMAIL</p>
+            <input type="text" id="sign_in_email" class="input" required>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <label>
+            <p class="label-txt">ENTER YOUR PASSWORD</p>
+            <input type="password" id="sign_in_psw" class="input" required>
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <button type="submit" onclick="submit_sign_in()">submit</button>
+    </form>
+
+    <!-- featured products -->
+    <section id="products" class="products py-5">
+
+        <div class="container">
+            <div class="col-10 mx-auto col-sm-6 text-center">
+                <h1 class="text-capitalize product-title">
+                    OUR BOOKS
+                </h1>
+            </div>
+
+            <!-- product items -->
+            <div class="row product-items" id="product-items">
+                <!-- single item  -->
+
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=adventure">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="https://cdn.pixabay.com/photo/2018/12/17/01/43/adventure-3879655_960_720.jpg"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name">Adventure</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- single item  -->
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=romance">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2018%2F12%2Fbest-romance-novels-2000.jpg"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name">Romance</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single item  -->
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=horror">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="https://www.penguin.co.uk/content/dam/prh/articles/adults/2019/october/Inline%20Image_horror-reading_list.jpg"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name">Horror</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single item  -->
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=bestseller">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="https://cdn.shopify.com/s/files/1/2088/2137/collections/colecao_best_sellers_600x600_crop_center.jpg?v=1563802279"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name">Best-Sellers</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=fantasy">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="http://www.barnesandnoble.com/blog/teen/wp-content/uploads/sites/6/2018/12/2019YA_2.jpg"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name">Fantasy</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single item  -->
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=poetry">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/poetry-books-1617290191.jpg?crop=0.502xw:1.00xh;0.0293xw,0&resize=640:*"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name ">Poetry</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- single item  -->
+                <div class="col-10 col-sm-8 col-lg-4 mx-auto my-3">
+                    <a href="shop.html?category=comics">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="https://www.womag.co.il/files/products/product182_image1_2021-07-29_13-24-45.jpg"
+                                    alt="" class="card-img-top product-img">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h4 id="item-name">Comics</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- about us -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-item-center">
+                <!-- <img src="" width="450" height="150" class="img-fluid watch-img"> -->
+
+                <div class="col-lg-7 text-lg-left text-center text-color about-text">
+                    <h1> OUR COMPANY</h1>
+                    <p class="text">
+                        Since 1895, founder Doron Gafsou’s mastery of crystal cutting has defined the company. His
+                        enduring passion for innovation and design has made it the world’s premier jewelry and accessory
+                        brand. Today, the family carries on the tradition of delivering extraordinary everyday style to
+                        women around the world.
+
+                        For more information about the Daniel Swarovski Corporation AG please visit
+                    </p>
+                    <p class="text">
+                        Since 1895, founder Doron Gafsou’s mastery of crystal cutting has defined the company. His
+                        enduring passion for innovation and design has made it the world’s premier jewelry and accessory
+                        brand. Today, the family carries on the tradition of delivering extraordinary everyday style to
+                        women around the world.
+
+                        For more information about the Daniel Swarovski Corporation AG please visit
+                    </p>
+                    <p class="text">
+                        Classic wedding rings are the perfect choice for newly engaged couples in the market for
+                        traditional, timeless rings. Like most bridal jewelry, classic wedding rings come in yellow
+                        gold, white gold and platinum. Rings are sold in a variety of widths, ranging from 2mm to 8mm.
+                        James Allen carries slightly domed comfort fit wedding rings, slightly flat comfort fit wedding
+                        rings, flat comfort fit wedding rings, high dome comfort fit wedding rings, low dome wedding
+                        rings, traditional slightly curved wedding rings and classic comfort fit wedding rings.
+
+                        Classic wedding rings are known for their comfort, as opposed to more intricate or carved
+                        wedding rings. Unlike engagement rings, both men and women wear wedding rings all the time and
+                        therefore it is extremely important that they are comfortable for every day wear.
+
+                        When selecting classic wedding rings, understanding width is also critical. The width of your
+                        wedding ring is entirely a matter of personal style. Some men and women prefer wider bands while
+                        others prefer narrower bands. The width of a woman's wedding ring, specifically, depends
+                        entirely on the width of the band on her engagement ring. If a woman with small hands already
+                        has a large, wide engagement ring, choosing a narrower band for her wedding ring is a better
+                        choice for her comfort. A woman with larger hands can handle wider bands on both engagement and
+                        wedding rings, but might prefer not to. Women's wedding rings traditionally match their
+                        engagement rings in some way, but they can be very different widths and look beautiful together.
+
+                        James Allen offers among the most extensive collection of men's and women's classic wedding
+                        rings. James Allen classic wedding rings are of the finest quality and cost significantly less
+                        than wedding rings sold in stores. For more information regarding our classic wedding rings,
+                        contact James Allen's 24/7 customer service, toll free at (877) 826-9866 or from outside the U.S
+                        at +1(412) 314-9060.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="footer"></section> -->
+    <div>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBojrpaeYx05sqWTxEpeaqWgp6l2rQ9lwk",
+                authDomain: "project-x-f85be.firebaseapp.com",
+                databaseURL: "https://project-x-f85be.firebaseio.com",
+                projectId: "project-x-f85be",
+                storageBucket: "project-x-f85be.appspot.com",
+                messagingSenderId: "484540264985",
+                appId: "1:484540264985:web:568f365115a25262437088",
+                measurementId: "G-XVEXZX9VCD"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+    </div>
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

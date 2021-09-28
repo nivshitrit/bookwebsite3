@@ -1,0 +1,43 @@
+.navbar .nav-link {
+    font-size : 15px;
+    text-transform: uppercase;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+    
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.bg-black {
+    background: #000;
+}
+
+  #cart_count {
+      background: #ff0000;
+      color: #fff;
+     float: right;
+  }
+
+#admin {
+    display: none;
+}
+
+#client {
+    display: none;
+}
+
+
+#sign_out {
+    display: none;
+}
+
+#navbar {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+
