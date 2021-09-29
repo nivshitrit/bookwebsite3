@@ -11,5 +11,6 @@ app.post('/count', (req, res) => {
     res.send({ count: count })
 });
 app.get('/', (req, res) => res.sendFile(path.resolve("costumer/index.html")));
+app.use(express.static(__dirname));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
