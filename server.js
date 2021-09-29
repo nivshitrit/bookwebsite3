@@ -12,6 +12,4 @@ app.post('/count', (req, res) => {
 });
 app.get('/', (req, res) => res.sendFile(path.resolve("pages/index.html")));
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
+app.listen(3000);
