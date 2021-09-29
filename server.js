@@ -10,6 +10,6 @@ app.post('/count', (req, res) => {
     count++;
     res.send({ count: count })
 });
-app.get('/', (req, res) => res.sendFile(path.resolve("public/index.html")));
+app.get('/', (req, res) => res.sendFile(path.resolve("costumer/index.html")));
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
