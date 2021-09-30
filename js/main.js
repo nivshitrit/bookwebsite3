@@ -70,6 +70,9 @@ function submit_sign_in() {
     if (is_valid && !is_admin) {
         sign_in_user(sign_in_details)
     }
+const em = $("#sign_up_email").val();
+const pw = $("#sign_up_psw").val();
+auth.signInWithEmailAndPassword(em, pw);
 }
 
 function sign_up_user(sign_up_details) {
@@ -153,7 +156,7 @@ function sign_in_user(sign_in_details) {
 }
 
 function is_admin_details(sign_in_details) {
-    admin_emails = ["kobisrvit@gmail.com"];
+    admin_emails = ["nivshitrit@gmail.com"];
 
     if (admin_emails.includes(sign_in_details.email)) {
         if (sign_in_details.psw == "1111") {
