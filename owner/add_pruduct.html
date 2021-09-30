@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -89,15 +89,34 @@
 
     <div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+        <script>
+            // Import the functions you need from the SDKs you need
+            //import { initializeApp } from "firebase/app";
+            import * as firebase from 'firebase';
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+
+            // Your web app's Firebase configuration
+            export const firebaseConfig = {
+                apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
+                authDomain: "bookwebsite-cf9d0.firebaseapp.com",
+                projectId: "bookwebsite-cf9d0",
+                storageBucket: "bookwebsite-cf9d0.appspot.com",
+                messagingSenderId: "761492794383",
+                appId: "1:761492794383:web:1de8490d228300bd39077a"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
 
 
     </div>
