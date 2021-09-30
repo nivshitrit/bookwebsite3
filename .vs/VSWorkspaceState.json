@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\asset",
+    "\\costumer",
     "\\css",
-    "\\js"
+    "\\js",
+    "\\owner"
   ],
-  "SelectedNode": "\\js\\contact.js",
+  "SelectedNode": "\\js\\add_pruduct.js",
   "PreviewInSolutionExplorer": false
 }
