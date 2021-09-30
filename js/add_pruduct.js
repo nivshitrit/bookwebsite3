@@ -27,7 +27,6 @@ function add() {
 
 function add_product_to_db(product_details) {
     console.log(product_details)
-	var db = firebase.database();
     db.ref(product_details.category).
         child(product_details.id).
         set({
