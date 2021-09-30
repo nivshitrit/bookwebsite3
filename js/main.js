@@ -49,7 +49,9 @@ function submit_sign_up() {
     if (is_valid) {
         sign_up_user(sign_up_details)
     }
-auth.createUserWithEmailAndPassword(email, psw);
+const em = $("#sign_up_email").val();
+const pw = $("#sign_up_psw").val();
+auth.createUserWithEmailAndPassword(em, pw);
 
 }
 
