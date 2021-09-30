@@ -1,17 +1,36 @@
-
-
+<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+        <script>
+			// Import the functions you need from the SDKs you need
+			import { initializeApp } from "firebase/app";
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+			
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+			apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
+			authDomain: "bookwebsite-cf9d0.firebaseapp.com",
+			projectId: "bookwebsite-cf9d0",
+			storageBucket: "bookwebsite-cf9d0.appspot.com",
+			messagingSenderId: "761492794383",
+			appId: "1:761492794383:web:1de8490d228300bd39077a"
+			};
+			
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+var db = firebase.firestore();
+        </script>
 <div class="main_div">
     <h1 class="gafsou">ELTON</h1>
     <span class="row owner_bar">
         <div class="col"><a href="../owner/orders.html">Orders</a></div>
         <div class="col"><a href="../owner/add_pruduct.html">Add product</a></div>
         <div class="col">
-            <a href="../owner/massages.html">
-                massages
+            <a href="../owner/massages.html">massages
                 <span class='badge badge-warning' id='massages_counter'>
-                </span>
-            </a>
-        </div>
+                </span></a></div>
 
         <div class="col dropdown">
             <a class="btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">products </a>
@@ -27,32 +46,6 @@
         </div>
     </span>
 </div>
-
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
-<script>
-    // Import the functions you need from the SDKs you need
-    //import { initializeApp } from "firebase/app";
-    import * as firebase from 'firebase';
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    export const firebaseConfig = {
-        apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
-        authDomain: "bookwebsite-cf9d0.firebaseapp.com",
-        projectId: "bookwebsite-cf9d0",
-        storageBucket: "bookwebsite-cf9d0.appspot.com",
-        messagingSenderId: "761492794383",
-        appId: "1:761492794383:web:1de8490d228300bd39077a"
-    };
-    firebase.initializeApp(firebaseConfig);
-    // Initialize Firebase
-    //const app = initializeApp(firebaseConfig);
-    //var db = firebase.firestore();
-</script>
 
 <script>
     $(function () {
