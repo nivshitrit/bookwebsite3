@@ -3,6 +3,7 @@ var sign_type = window.location.search.substring(1);
 console.log(sign_type)
 console.log(localStorage.getItem("client"))
 
+
 if (sign_type == "sign_up") {
     sign_up();
 }
@@ -48,6 +49,8 @@ function submit_sign_up() {
     if (is_valid) {
         sign_up_user(sign_up_details)
     }
+auth.createUserWithEmailAndPassword(email, psw);
+
 }
 
 function submit_sign_in() {
