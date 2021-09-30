@@ -1,5 +1,5 @@
 var sign_type = window.location.search.substring(1);
-var sign_type = queryString.split("=")[1]
+// var sign_type = queryString.split("=")[1]
 console.log(sign_type)
 console.log(localStorage.getItem("client"))
 
