@@ -5,7 +5,7 @@ console.log("my")
 
 function add() {
     var product_details = {
-        company: $("#company").val(),
+        author: $("#author").val(),
         id: $("#id").val(),
         name: $("#name").val(),
         category: $("#category").val(),
@@ -30,7 +30,7 @@ function add_product_to_db(product_details) {
     firebase.database().ref(product_details.category).
         child(product_details.id).
         set({
-            company: product_details.company,
+            author: product_details.author,
             id: product_details.id,
             name: product_details.name,
             category: product_details.category,
@@ -45,7 +45,7 @@ function add_product_to_db(product_details) {
 
 function is_valid_product_details(product_details) {
     var re_4_digit_price = /^\d{1,4}$/
-    if (product_details.company == "") {
+    if (product_details.author == "") {
         return false;
     }
     if (product_details.name == "") {

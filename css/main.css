@@ -1,10 +1,8 @@
 
 body {
-    font-family : 'Poppins',sans-serif;
-    background: linear-gradient(
-        rgba(0,0,0,.3),rgba(0,0,0,.4)),
-        url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKZqXzgCyUhkBQyAC_xuEt9-EEf2wZSznPgw&usqp=CAU');
-        background-size:cover;
+    font-family: 'Poppins',sans-serif;
+    background: linear-gradient( rgba(0,0,0,.3),rgba(0,0,0,.4)), url('https://i2.wp.com/www.csscodelab.com/wp-content/uploads/2019/11/stripe-hero-background-effect-html-css.png?fit=1062%2C631&ssl=1');
+    background-size: cover;
 }
 
 /* slider */
@@ -94,7 +92,7 @@ body {
 }
 
 .product-title {
-    color: rgb(78, 78, 28);
+    color: white;
 }
 
 .single-item {

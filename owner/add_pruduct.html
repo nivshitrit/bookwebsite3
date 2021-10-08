@@ -45,8 +45,8 @@
                     <label for="name"><span> name <span class="required">*</span></span>
                         <input type="text" id="name" class="input-field" name="name" value="" required />
                     </label>
-                    <label for="company"><span> company <span class="required">*</span></span>
-                        <input type="text" id="company" class="input-field" name="company" value="" required />
+                    <label for="author"><span> author <span class="required">*</span></span>
+                        <input type="text" id="author" class="input-field" name="author" value="" required />
                     </label>
                     <label for="price"><span> price <span class="required">*</span></span>
                         <input type="text" id="price" class="input-field" name="price" value="" required />
@@ -60,13 +60,13 @@
                     <label for="category"><span>category<span class="required">*</span></span>
                         <select id="category" name="category" class="select-field" required>
                             <option value="choose">choose</option>
-                            <option value="rings">rings</option>
-                            <option value="diamonds">diamonds</option>
-                            <option value="watches">watches</option>
-                            <option value="bracelets">bracelets</option>
-                            <option value="pendants">pendants</option>
-                            <option value="earrings">earrings</option>
-                            <option value="necklaces">necklaces</option>
+                            <option value="adventure">Adventure</option>
+                            <option value="romance">Romance</option>
+                            <option value="horror">Horror</option>
+                            <option value="bestseller">BestSeller</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="poetry">Poetry</option>
+                            <option value="comics">Comics</option>
                         </select>
                     </label>
                     <label for="description"><span> description </span>
@@ -98,6 +98,22 @@
         <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+        <script>
+			// Your web app's Firebase configuration
+            const firebaseConfig = {
+                apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
+                authDomain: "bookwebsite-cf9d0.firebaseapp.com",
+                databaseURL: "https://bookwebsite-cf9d0-default-rtdb.europe-west1.firebasedatabase.app",
+                projectId: "bookwebsite-cf9d0",
+                storageBucket: "bookwebsite-cf9d0.appspot.com",
+                messagingSenderId: "761492794383",
+                appId: "1:761492794383:web:1de8490d228300bd39077a"
+            };
+			
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+        </script>
+
 
 
     </div>

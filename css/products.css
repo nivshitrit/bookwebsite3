@@ -11,7 +11,7 @@ img{
 .form-style-2{
     display: none;
     position: absolute;
-    background-color: yellow;
+    background-color: lightgrey;
     margin: -100px 0 0 -200px;
     top: 10%;
 	left: 40%;

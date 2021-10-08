@@ -22,7 +22,7 @@ function add_row_to_table(client_order) {
             '<th>' + client_order.receipt_number + '</th>' +
             '<td class="name">' + client_order.email + '</td>' +
             '<td >' + client_order.date + '</td>' +
-            '<td class="company">' + client_order.price + '</td>' +
+            '<td class="author">' + client_order.price + '</td>' +
             '<th scope="col"></th>' +
             '<td><button class="btn btn-info more_info" onclick="more_info(' +
             "'" + client_order.receipt_number + "','" + client_order.date + "'" + ')">MORE INFO</button></td>' +

@@ -1,1 +1,0 @@
-# jewlery_website
