@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,6 +12,10 @@
 
     <!-- kit code font awesome -->
     <script src="https://kit.fontawesome.com/5febebbc7f.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
 
     <!-- css -->
 
@@ -27,7 +30,7 @@
         })
     </script>
 
-        
+       
     <title>book shop</title>
 </head>
 
@@ -96,7 +99,6 @@
         <hr>
         <label>
             <p class="label-txt ">EMAIL</p>
-
             <input type="text" id="sign_up_email" class="input" required>
             <div class="line-box">
                 <div class="line">
@@ -284,14 +286,14 @@
                 <div class="col-lg-7 text-lg-left text-center text-color about-text">
                     <h1> About </h1>
                     <p class="text">
-                        ELTON JOHN'S BOOKSTORE leverages the power to offer online costumers the Web's premier destination for books.
+                        ELTON JOHN'S BOOKSTORE leverages the power to offer online customers the Web's premier destination for books.
                     </p>
                     <p class="text">
                         Taking advantage of vast warehouses across the United States, we stock over 1 million titles for immediate delivery -- that's more titles than any other online bookseller.
 
-                        With so many titles, it is vital to give costumers an easy way to find precisely the books they are looking for.
+                        With so many titles, it is vital to give customers an easy way to find precisely the books they are looking for.
                     </p>
-
+                 
 
                 </div>
             </div>
@@ -306,31 +308,39 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
-		<script>
-			// Your web app's Firebase configuration
-            const firebaseConfig = {
-                apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
-                authDomain: "bookwebsite-cf9d0.firebaseapp.com",
-                databaseURL: "https://bookwebsite-cf9d0-default-rtdb.europe-west1.firebasedatabase.app",
-                projectId: "bookwebsite-cf9d0",
-                storageBucket: "bookwebsite-cf9d0.appspot.com",
-                messagingSenderId: "761492794383",
-                appId: "1:761492794383:web:1de8490d228300bd39077a"
-            };
-			
-			// Initialize Firebase
-			firebase.initializeApp(firebaseConfig);
-        </script>
 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
 
 
     </div>
     <script src="../js/main.js"></script>
+    <script>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+        apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
+        authDomain: "bookwebsite-cf9d0.firebaseapp.com",
+        projectId: "bookwebsite-cf9d0",
+        storageBucket: "bookwebsite-cf9d0.appspot.com",
+        messagingSenderId: "761492794383",
+        appId: "1:761492794383:web:1de8490d228300bd39077a"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+var db = firebase.database();
+    </script>
 
 </body>
 

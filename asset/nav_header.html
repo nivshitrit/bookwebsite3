@@ -1,5 +1,24 @@
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+<script>
 
-
+			
+			// Your web app's Firebase configuration
+			const firebaseConfig = {
+			apiKey: "AIzaSyA7H_cqXtkqETZkc6phY1pn1CyC1V2_5Hc",
+			authDomain: "bookwebsite-cf9d0.firebaseapp.com",
+			projectId: "bookwebsite-cf9d0",
+			storageBucket: "bookwebsite-cf9d0.appspot.com",
+			messagingSenderId: "761492794383",
+			appId: "1:761492794383:web:1de8490d228300bd39077a"
+			};
+			
+			// Initialize Firebase
+			const app = initializeApp(firebaseConfig);
+var db = firebase.database();
+        </script>
 <div>
     <nav id="navbar" class="navbar navbar-expand-sm navbar-dark bg-black ">
         <div class="container">
@@ -95,7 +114,7 @@
             $("#sliders").show();
             $(".welcome").hide();
             $(".sign").show();
-            window.location = "../costumer/index.html"
+            window.location = "../customer/index.html"
         })
     });
 </script>
