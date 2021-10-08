@@ -127,12 +127,12 @@ function add_item_row_to_receipt(name, quantity, price) {
 }
 
 function back_to_main_page() {
-    var url = '/jewlery_website/customer/shop.html?category=rings';
+    var url = '/costumer/shop.html?category=adventure';
     window.location.href = url;
 }
 
 function delete_order_from_local_storage() {
-    var categories = ["rings", "necklaces", "pendants", "earrings", "watches", "bracelets", "diamonds"]
+    var categories = ["adventure", "romance", "horror", "bestsellers", "fantasy", "poetry", "comics"]
     for (let value of categories) {
         localStorage.removeItem(value)
     }

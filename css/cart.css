@@ -2,6 +2,12 @@
 ** Style Simple Ecommerce Theme for Bootstrap 4
 ** Created by T-PHP https://t-php.fr/43-theme-ecommerce-bootstrap-4.html
 */
+
+body {
+    background: linear-gradient( rgba(0,0,0,.3),rgba(0,0,0,.4)), url('https://i2.wp.com/www.csscodelab.com/wp-content/uploads/2019/11/stripe-hero-background-effect-html-css.png?fit=1062%2C631&ssl=1');
+    background-size: cover;
+}
+
 .bloc_left_price {
     color: #c01508;
     text-align: center;
@@ -9,7 +15,7 @@
     font-size: 150%;
 }
 .category_block li:hover {
-    background-color: #007bff;
+    background-color: #7b10a5;
 }
 .category_block li:hover a {
     color: #ffffff;

@@ -1,9 +1,9 @@
 
-var categories = ["rings", "necklaces", "pendants", "earrings", "watches", "bracelets", "diamonds"]
+var categories = ["adventure", "romance", "horror", "bestsellers", "fantasy", "poetry", "comics"]
 var total_sum = $(".total")
 
 $(".continue_shopping").click(() => {
-    window.location = '/jewlery_website/customer/shop.html?category=rings'
+    window.location = '../costumer/shop.html?category=adventure'
 })
 
 categories.forEach(category => {
@@ -109,13 +109,13 @@ function decrease_cart_counter() {
 }
 
 var order = {
-    "rings": {},
-    "necklaces": {},
-    "pendants": {},
-    "earrings": {},
-    "watches": {},
-    "bracelets": {},
-    "diamonds": {}
+    "adventure": {},
+    "romance": {},
+    "horror": {},
+    "bestsellers": {},
+    "fantasy": {},
+    "poetry": {},
+    "comics": {}
 }
 
 function checkout() {
@@ -144,7 +144,7 @@ function keep_order_in_local_storage() {
 
     localStorage.setItem("order", JSON.stringify(order));
 
-    var url = '/jewlery_website/customer/payment.html?total=' + Math.floor(Number(total_sum.text().replace("$", "")))
+    var url = '../costumer/payment.html?total=' + Math.floor(Number(total_sum.text().replace("$", "")))
     window.location.href = url;
 }
 
